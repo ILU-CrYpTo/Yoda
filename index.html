@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>YODA SOL</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/emotions/yoda.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Micro+5&family=Potta+One&family=Sixtyfour+Convergence&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" />
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#background">Background</a></li>
+              <li><a href="#emotion">Emotions</a></li>
+              <li><a href="#evolution">Evolution</a></li>
+              <li><a href="#tokenomics">Tokenomics</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#buy">Buy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home">
+      <img class="main" src="img/main.png" />
+      <h1><span>YOD</span> SOL</h1>
+      <div class="links">
+        <a href="https://x.com/yodalifestyle?s=11" class="x"><img src="img/x.png" /></a>
+        <a href="https://t.me/yodalifestyle" class="tg"><img src="img/tg.png" /></a>
+        <a href="https://pump.fun/board" class="pump"><img src="img/pump.png" /></a>
+      </div>
+      <h2 class="words">
+        <span>S</span>
+        <span>c</span>
+        <span>r</span>
+        <span>o</span>
+        <span>l</span>
+        <span>l</span>
+        <span>d</span>
+        <span>o</span>
+        <span>w</span>
+        <span>n</span>
+      </h2>
+    </div>
+    <div class="background">
+      <h2 id="background">Background</h2>
+      <img class="i1" src="img/background.png" />
+      <img class="i2" src="img/background2.png" />
+      <video id="story-video" src="story.mp4" preload="auto"></video>
+      <div id="overlay-text">Click here</div>
+    </div>
+    <div class="emotions">
+      <div id="emotion"></div>
+      <!-- Картинка -->
+      <img
+        id="emotionImage"
+        class="image"
+        src="img/emotions/yoda.png"
+        alt="Эмоция"
+      />
+
+      <!-- Описание -->
+      <p id="emotionText">🙂</p>
+
+      <!-- Кнопка -->
+      <button onclick="changeEmotion()">Change</button>
+
+      <p class="stickerpack">
+        You can find our stickerpack here
+        <a href="https://t.me/yodalifestyle"><img src="img/sticker.png" /></a>
+      </p>
+    </div>
+    <div class="evolution">
+      <div id="evolution"></div>
+      <h2>Evolution</h2>
+      <h2 class="shadow">Evolution</h2>
+      <div class="grid">
+        <img src="img/evolution/1.png" />
+        <img src="img/evolution/2.png" />
+        <img src="img/evolution/3.png" />
+        <img src="img/evolution/4.png" />
+      </div>
+      <p>Yoda grows cosntantly like our project</p>
+    </div>
+    <div class="tokenomics">
+      <h2 id="tokenomics">Tokenomics</h2>
+      <div class="suply">
+        <h3>Total suply</h3>
+        <p>1 Billion YodaSOL</p>
+        <img src="img/chest.png" />
+      </div>
+      <div class="liquidity">
+        <h3>Liquidity pool</h3>
+        <div class="bar">
+          <p>93%</p>
+          <div class="dev">
+            <p>7%</p>
+          </div>
+          <div class="green"></div>
+        </div>
+        <table>
+          <tr>
+            <td><div class="sociaty"></div></td>
+            <td><p>Social pool</p></td>
+          </tr>
+          <tr class="down-row">
+            <td><div class="developer"></div></td>
+            <td><p>Developer</p></td>
+          </tr>
+        </table>
+      </div>
+      <div class="pool"></div>
+      <img class="pc" src="img/pc.png" />
+    </div>
+    <div class="gallery">
+      <h2 id="gallery">Gallery</h2>
+      <div class="image-container">
+        <span style="--i: 1">
+          <img src="img/gallery/1.jpg" alt="" />
+        </span>
+        <span style="--i: 2">
+          <img src="img/gallery/2.jpg" alt="" />
+        </span>
+        <span style="--i: 3">
+          <img src="img/gallery/3.jpg" alt="" />
+        </span>
+        <span style="--i: 4">
+          <img src="img/gallery/4.jpg" alt="" />
+        </span>
+        <span style="--i: 5">
+          <img src="img/gallery/5.jpg" alt="" />
+        </span>
+        <span style="--i: 6">
+          <img src="img/gallery/6.jpg" alt="" />
+        </span>
+        <span style="--i: 7">
+          <img src="img/gallery/7.jpg" alt="" />
+        </span>
+        <span style="--i: 8">
+          <img src="img/gallery/8.jpg" alt="" />
+        </span>
+      </div>
+      <!-- Button Container -->
+      <div class="btn-wrapper">
+        <button class="btn" id="prev">Prev</button>
+        <button class="btn" id="next">Next</button>
+      </div>
+    </div>
+    <div class="bottom">
+      <img class="coin" src="img/evolution/2.png" />
+      <img class="window" src="img/window.png" />
+      <a href="https://pump.fun/board" id="buy"><button>Click here to buy</button></a>
+    </div>
+    <script>
+      const imgcontainer = document.querySelector(".image-container");
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+
+      let a = 0;
+      let timeout;
+
+      prev.addEventListener("click", () => {
+        a = a + 45;
+        clearTimeout(timeout);
+        updategellary();
+      });
+
+      next.addEventListener("click", () => {
+        a = a - 45;
+        clearTimeout(timeout);
+        updategellary();
+      });
+
+      function updategellary() {
+        imgcontainer.style.transform = `perspective(1000px) rotateY(${a}deg)`;
+        timeout = setTimeout(() => {
+          a = a - 45;
+
+          updategellary();
+        }, 4000);
+      }
+      updategellary();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("story-video");
+        const overlayText = document.getElementById("overlay-text");
+
+        // Показать текст "Click here" при паузе
+        video.addEventListener("pause", () => {
+          overlayText.style.display = "block";
+        });
+
+        // Скрыть текст "Click here" при воспроизведении
+        video.addEventListener("play", () => {
+          overlayText.style.display = "none";
+        });
+
+        // Переключение воспроизведения/паузы при клике
+        video.addEventListener("click", () => {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+
+        // Убедитесь, что текст виден при начальной загрузке
+        overlayText.style.display = "block";
+      });
+    </script>
+    <script>
+      // Данные о картинках и эмоциях
+      const emotions = [
+        { src: "img/emotions/sad.png", text: "😟" },
+        { src: "img/emotions/anger.png", text: "😡" },
+        { src: "img/emotions/cool.png", text: "😎" },
+        { src: "img/emotions/cry.png", text: "😭" },
+        { src: "img/emotions/ew.png", text: "🤮" },
+        { src: "img/emotions/laugh.png", text: "😂" },
+        { src: "img/emotions/love.png", text: "😍" },
+        { src: "img/emotions/shoked.png", text: "😮" },
+        { src: "img/emotions/chill.png", text: "😌" },
+      ];
+
+      let currentIndex = 0;
+
+      function changeEmotion() {
+        // Переключение на следующий элемент
+        currentIndex = (currentIndex + 1) % emotions.length;
+
+        // Изменение картинки и текста
+        const image = document.getElementById("emotionImage");
+        const text = document.getElementById("emotionText");
+        image.src = emotions[currentIndex].src;
+        text.textContent = emotions[currentIndex].text;
+      }
+    </script>
+  </body>
+</html>
